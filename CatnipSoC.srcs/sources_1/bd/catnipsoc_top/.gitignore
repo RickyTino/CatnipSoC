@@ -1,0 +1,6 @@
+ipshared/
+hdl/
+sim/
+synth/
+*_ooc.xdc
+hw_handoff/
