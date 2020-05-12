@@ -6,6 +6,6 @@ RickyTino
 
 ## To be updated...
 
-## Relevent Work
+## Related Work
 - https://github.com/hitwh-nscscc/Cattery-Bootloader
 - https://github.com/RickyTino/MangoMIPS32
