@@ -61,7 +61,8 @@
       "negate_eth_int": "",
       "axi_gpio_0": "",
       "intr_concat_0": "",
-      "MangoMIPS32_0": ""
+      "MangoMIPS32_0": "",
+      "vio_0": ""
     },
     "interface_ports": {
       "ddr2_sdram": {
@@ -501,16 +502,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_auto_us_cc_df": {
-                "interface_ports": [
-                  "auto_pc/M_AXI",
-                  "auto_us_cc_df/S_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_auto_us_cc_df": {
+                "interface_ports": [
+                  "auto_pc/M_AXI",
+                  "auto_us_cc_df/S_AXI"
                 ]
               },
               "auto_us_cc_df_to_s00_couplers": {
@@ -609,16 +610,16 @@
               }
             },
             "interface_nets": {
-              "m00_couplers_to_auto_ds": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_ds/S_AXI"
-                ]
-              },
               "auto_ds_to_m00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_ds/M_AXI"
+                ]
+              },
+              "m00_couplers_to_auto_ds": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_ds/S_AXI"
                 ]
               }
             },
@@ -709,10 +710,10 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_m01_couplers": {
+              "m01_couplers_to_auto_ds": {
                 "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
+                  "S_AXI",
+                  "auto_ds/S_AXI"
                 ]
               },
               "auto_ds_to_auto_pc": {
@@ -721,10 +722,10 @@
                   "auto_pc/S_AXI"
                 ]
               },
-              "m01_couplers_to_auto_ds": {
+              "auto_pc_to_m01_couplers": {
                 "interface_ports": [
-                  "S_AXI",
-                  "auto_ds/S_AXI"
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -859,16 +860,16 @@
               }
             },
             "interface_nets": {
-              "m03_couplers_to_auto_ds": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_ds/S_AXI"
-                ]
-              },
               "auto_ds_to_m03_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_ds/M_AXI"
+                ]
+              },
+              "m03_couplers_to_auto_ds": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_ds/S_AXI"
                 ]
               }
             },
@@ -965,16 +966,16 @@
                   "auto_ds/S_AXI"
                 ]
               },
-              "auto_ds_to_auto_pc": {
-                "interface_ports": [
-                  "auto_ds/M_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_m04_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "auto_ds_to_auto_pc": {
+                "interface_ports": [
+                  "auto_ds/M_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1213,22 +1214,34 @@
           }
         },
         "interface_nets": {
-          "m00_couplers_to_soc_interconnect": {
+          "xbar_to_m04_couplers": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
+              "xbar/M04_AXI",
+              "m04_couplers/S_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
+          "xbar_to_m01_couplers": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_soc_interconnect": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
             ]
           },
           "m01_couplers_to_soc_interconnect": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "m00_couplers_to_soc_interconnect": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "s00_couplers_to_xbar": {
@@ -1243,58 +1256,16 @@
               "s00_couplers/S_AXI"
             ]
           },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
           "xbar_to_m05_couplers": {
             "interface_ports": [
               "xbar/M05_AXI",
               "m05_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m03_couplers": {
-            "interface_ports": [
-              "xbar/M03_AXI",
-              "m03_couplers/S_AXI"
-            ]
-          },
-          "m04_couplers_to_soc_interconnect": {
-            "interface_ports": [
-              "M04_AXI",
-              "m04_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m04_couplers": {
-            "interface_ports": [
-              "xbar/M04_AXI",
-              "m04_couplers/S_AXI"
-            ]
-          },
-          "m05_couplers_to_soc_interconnect": {
-            "interface_ports": [
-              "M05_AXI",
-              "m05_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
-          "m03_couplers_to_soc_interconnect": {
-            "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
-            ]
-          },
-          "m02_couplers_to_soc_interconnect": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
             ]
           },
           "m06_couplers_to_soc_interconnect": {
@@ -1307,6 +1278,36 @@
             "interface_ports": [
               "xbar/M06_AXI",
               "m06_couplers/S_AXI"
+            ]
+          },
+          "m05_couplers_to_soc_interconnect": {
+            "interface_ports": [
+              "M05_AXI",
+              "m05_couplers/M_AXI"
+            ]
+          },
+          "m03_couplers_to_soc_interconnect": {
+            "interface_ports": [
+              "M03_AXI",
+              "m03_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_m03_couplers": {
+            "interface_ports": [
+              "xbar/M03_AXI",
+              "m03_couplers/S_AXI"
+            ]
+          },
+          "m04_couplers_to_soc_interconnect": {
+            "interface_ports": [
+              "M04_AXI",
+              "m04_couplers/M_AXI"
             ]
           }
         },
@@ -1514,13 +1515,13 @@
             "value": "BUFG"
           },
           "CLKOUT1_JITTER": {
-            "value": "151.636"
+            "value": "175.402"
           },
           "CLKOUT1_PHASE_ERROR": {
             "value": "98.575"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "50.000"
+            "value": "25.000"
           },
           "CLKOUT2_DRIVES": {
             "value": "BUFG"
@@ -1634,7 +1635,7 @@
             "value": "10.000"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "20.000"
+            "value": "40.000"
           },
           "MMCM_CLKOUT1_DIVIDE": {
             "value": "20"
@@ -1718,7 +1719,7 @@
         "xci_name": "catnipsoc_top_blk_mem_gen_0_0",
         "parameters": {
           "Coe_File": {
-            "value": "../../../../../../../../../Cattery-Bootloader/cattery_bootloader.coe"
+            "value": "../../../../../../../Cattery-Bootloader/cattery_bootloader.coe"
           },
           "Enable_32bit_Address": {
             "value": "true"
@@ -1901,6 +1902,12 @@
               }
             },
             "interface_nets": {
+              "s00_data_fifo_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "s00_data_fifo/M_AXI"
+                ]
+              },
               "s00_couplers_to_auto_cc": {
                 "interface_ports": [
                   "S_AXI",
@@ -1911,12 +1918,6 @@
                 "interface_ports": [
                   "s00_data_fifo/S_AXI",
                   "auto_cc/M_AXI"
-                ]
-              },
-              "s00_data_fifo_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "s00_data_fifo/M_AXI"
                 ]
               }
             },
@@ -2097,6 +2098,15 @@
       "MangoMIPS32_0": {
         "vlnv": "xilinx.com:user:MangoMIPS32:1.1.3",
         "xci_name": "catnipsoc_top_MangoMIPS32_0_0"
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "catnipsoc_top_vio_0_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2106,16 +2116,16 @@
           "mig_7series_0/DDR2"
         ]
       },
-      "soc_interconnect_M04_AXI": {
-        "interface_ports": [
-          "axi_ethernetlite_0/S_AXI",
-          "soc_interconnect/M04_AXI"
-        ]
-      },
       "axi_uart16550_1_UART": {
         "interface_ports": [
           "usb_uart",
           "axi_uart16550_0/UART"
+        ]
+      },
+      "soc_interconnect_M04_AXI": {
+        "interface_ports": [
+          "axi_ethernetlite_0/S_AXI",
+          "soc_interconnect/M04_AXI"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {
@@ -2130,58 +2140,10 @@
           "mii_to_rmii_0/RMII_PHY_M"
         ]
       },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "led_16bits",
-          "axi_gpio_0/GPIO"
-        ]
-      },
-      "soc_interconnect_M00_AXI": {
-        "interface_ports": [
-          "spi_flash_controller/AXI_FULL",
-          "soc_interconnect/M00_AXI"
-        ]
-      },
       "axi_ethernetlite_0_MII": {
         "interface_ports": [
           "axi_ethernetlite_0/MII",
           "mii_to_rmii_0/MII"
-        ]
-      },
-      "axi_interconnect_0_M00_AXI": {
-        "interface_ports": [
-          "mig_7series_0/S_AXI",
-          "mig_interconnect/M00_AXI"
-        ]
-      },
-      "soc_interconnect_M06_AXI": {
-        "interface_ports": [
-          "axi_gpio_0/S_AXI",
-          "soc_interconnect/M06_AXI"
-        ]
-      },
-      "soc_interconnect_M05_AXI": {
-        "interface_ports": [
-          "soc_interconnect/M05_AXI",
-          "axi_intc_0/s_axi"
-        ]
-      },
-      "soc_interconnect_M02_AXI": {
-        "interface_ports": [
-          "soc_interconnect/M02_AXI",
-          "mig_interconnect/S00_AXI"
-        ]
-      },
-      "S00_AXI_1": {
-        "interface_ports": [
-          "soc_interconnect/S00_AXI",
-          "MangoMIPS32_0/m_axi"
-        ]
-      },
-      "axi_ethernetlite_0_MDIO": {
-        "interface_ports": [
-          "eth_mdio_mdc",
-          "axi_ethernetlite_0/MDIO"
         ]
       },
       "soc_interconnect_M01_AXI": {
@@ -2190,10 +2152,28 @@
           "axi_uart16550_0/S_AXI"
         ]
       },
+      "axi_ethernetlite_0_MDIO": {
+        "interface_ports": [
+          "eth_mdio_mdc",
+          "axi_ethernetlite_0/MDIO"
+        ]
+      },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "led_16bits",
+          "axi_gpio_0/GPIO"
+        ]
+      },
       "spi_flash_controller_SPI_0": {
         "interface_ports": [
           "qspi_flash",
           "spi_flash_controller/SPI_0"
+        ]
+      },
+      "axi_interconnect_0_M00_AXI": {
+        "interface_ports": [
+          "mig_7series_0/S_AXI",
+          "mig_interconnect/M00_AXI"
         ]
       },
       "axi_gpio_0_GPIO2": {
@@ -2202,10 +2182,40 @@
           "axi_gpio_0/GPIO2"
         ]
       },
+      "soc_interconnect_M06_AXI": {
+        "interface_ports": [
+          "axi_gpio_0/S_AXI",
+          "soc_interconnect/M06_AXI"
+        ]
+      },
+      "soc_interconnect_M02_AXI": {
+        "interface_ports": [
+          "soc_interconnect/M02_AXI",
+          "mig_interconnect/S00_AXI"
+        ]
+      },
       "soc_interconnect_M03_AXI": {
         "interface_ports": [
           "axi_bram_ctrl_0/S_AXI",
           "soc_interconnect/M03_AXI"
+        ]
+      },
+      "soc_interconnect_M00_AXI": {
+        "interface_ports": [
+          "spi_flash_controller/AXI_FULL",
+          "soc_interconnect/M00_AXI"
+        ]
+      },
+      "S00_AXI_1": {
+        "interface_ports": [
+          "soc_interconnect/S00_AXI",
+          "MangoMIPS32_0/m_axi"
+        ]
+      },
+      "soc_interconnect_M05_AXI": {
+        "interface_ports": [
+          "soc_interconnect/M05_AXI",
+          "axi_intc_0/s_axi"
         ]
       }
     },
@@ -2244,8 +2254,7 @@
           "axi_intc_0/s_axi_aclk",
           "soc_interconnect/M05_ACLK",
           "soc_interconnect/M06_ACLK",
-          "axi_gpio_0/s_axi_aclk",
-          "spi_flash_controller/ext_spi_clk"
+          "axi_gpio_0/s_axi_aclk"
         ]
       },
       "reset_1": {
@@ -2276,14 +2285,15 @@
       "clk_wiz_0_clk_slowest": {
         "ports": [
           "basic_clocking/clk_slowest",
-          "system_reset/slowest_sync_clk"
+          "system_reset/slowest_sync_clk",
+          "spi_flash_controller/ext_spi_clk",
+          "vio_0/clk"
         ]
       },
       "constant_0_dout": {
         "ports": [
           "ground_0/dout",
           "axi_uart16550_0/freeze",
-          "system_reset/mb_debug_sys_rst",
           "intr_concat_0/intr2",
           "intr_concat_0/intr3",
           "intr_concat_0/intr4",
@@ -2384,6 +2394,12 @@
         "ports": [
           "axi_intc_0/irq",
           "intr_concat_0/intr1"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "system_reset/mb_debug_sys_rst"
         ]
       }
     },

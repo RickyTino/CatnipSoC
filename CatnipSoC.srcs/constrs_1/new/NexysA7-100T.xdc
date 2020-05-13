@@ -203,9 +203,9 @@
 set_property -dict { PACKAGE_PIN D5    IOSTANDARD LVCMOS33 } [get_ports { eth_refclk }]; #IO_L11P_T1_SRCC_35 Sch=eth_refclk
 set_property -dict { PACKAGE_PIN B8    IOSTANDARD LVCMOS33 } [get_ports { eth_intn }]; #IO_L12P_T1_MRCC_16 Sch=eth_intn
 
-create_generated_clock -name myethrefclk -source [get_pins catnipsoc_top_i/clocking_unit/clk_periph] -multiply_by 1 [get_pins catnipsoc_top_i/clocking_unit/clk_periph]
+create_generated_clock -name myethrefclk -source [get_pins catnipsoc_top_i/basic_clocking/clk_periph] -multiply_by 1 [get_pins catnipsoc_top_i/basic_clocking/clk_periph]
 
-create_generated_clock -name phy_outclk -source [get_pins catnipsoc_top_i/clocking_unit/clk_ethref] -multiply_by 1 [get_pins catnipsoc_top_i/clocking_unit/clk_ethref]
+create_generated_clock -name phy_outclk -source [get_pins catnipsoc_top_i/basic_clocking/clk_ethref] -multiply_by 1 [get_pins catnipsoc_top_i/basic_clocking/clk_ethref]
 
 set_input_delay -clock [get_clocks phy_outclk] -min -add_delay 3.170 [get_ports {eth_rmii_rxd[*]}]
 set_input_delay -clock [get_clocks phy_outclk] -max -add_delay 14.170 [get_ports {eth_rmii_rxd[*]}]
