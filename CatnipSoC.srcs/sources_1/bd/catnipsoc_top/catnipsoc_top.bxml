@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Root MajorVersion="0" MinorVersion="36">
+<Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="catnipsoc_top" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1589333076"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1589333076"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1589333076"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1589333076"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1589744341"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1589744341"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1589744341"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1589744341"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="ip\catnipsoc_top_xbar_0\catnipsoc_top_xbar_0.xci" Type="IP">
-        <Instance HierarchyPath="soc_interconnect/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\catnipsoc_top_axi_interconnect_0_0\catnipsoc_top_axi_interconnect_0_0.xci" Type="IP">
         <Instance HierarchyPath="soc_interconnect"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -151,14 +143,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\catnipsoc_top_MangoMIPS32_0_0\catnipsoc_top_MangoMIPS32_0_0.xci" Type="IP">
-        <Instance HierarchyPath="MangoMIPS32_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\catnipsoc_top_intr_concat_0_1\catnipsoc_top_intr_concat_0_1.xci" Type="IP">
         <Instance HierarchyPath="intr_concat_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -173,6 +157,49 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\catnipsoc_top_xbar_0\catnipsoc_top_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="soc_interconnect/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\catnipsoc_top_MangoMIPS32_0_1\catnipsoc_top_MangoMIPS32_0_1.xci" Type="IP">
+        <Instance HierarchyPath="MangoMIPS32_up"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\catnipsoc_top_axi_bram_ctrl_0_1\catnipsoc_top_axi_bram_ctrl_0_1.xci" Type="IP">
+        <Instance HierarchyPath="axi_bram_ctrl_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\catnipsoc_top_bootrom_0\catnipsoc_top_bootrom_0.xci" Type="IP">
+        <Instance HierarchyPath="test_ram"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth\catnipsoc_top.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim\catnipsoc_top.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\catnipsoc_top_auto_pc_4\catnipsoc_top_auto_pc_4.xci" Type="IP">
@@ -271,7 +298,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\catnipsoc_top_s00_data_fifo_0\catnipsoc_top_s00_data_fifo_0.xci" Type="IP">
+      <File Name="ip\catnipsoc_top_auto_ds_6\catnipsoc_top_auto_ds_6.xci" Type="IP">
+        <Instance HierarchyPath="soc_interconnect/m07_couplers/auto_ds"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\catnipsoc_top_s00_data_fifo_72\catnipsoc_top_s00_data_fifo_72.xci" Type="IP">
         <Instance HierarchyPath="mig_interconnect/s00_couplers/s00_data_fifo"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -285,17 +320,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth\catnipsoc_top.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\catnipsoc_top.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="catnipsoc_top_ooc.xdc" Type="XDC">
