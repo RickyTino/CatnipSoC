@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="catnipsoc_top" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1589744341"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1589744341"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1589744341"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1589744341"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1589773396"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1589773396"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1589773396"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1589773396"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\catnipsoc_top_axi_interconnect_0_0\catnipsoc_top_axi_interconnect_0_0.xci" Type="IP">
         <Instance HierarchyPath="soc_interconnect"/>
@@ -306,7 +306,7 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\catnipsoc_top_s00_data_fifo_72\catnipsoc_top_s00_data_fifo_72.xci" Type="IP">
+      <File Name="ip\catnipsoc_top_s00_data_fifo_78\catnipsoc_top_s00_data_fifo_78.xci" Type="IP">
         <Instance HierarchyPath="mig_interconnect/s00_couplers/s00_data_fifo"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
