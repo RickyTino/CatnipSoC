@@ -1,4 +1,4 @@
-# CatnipSoc
+# CatnipSoC
 An SoC on NexysA7-100T FPGA board based on Xilinx IPs and MangoMIPS32 processor core. 
 
 ## Author
